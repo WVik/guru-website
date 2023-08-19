@@ -1,0 +1,212 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Background color changed to white */
+  }
+
+
+  .card2 {
+    background-color: #eae0d6; /* Background color of the card */
+    margin: 10px;
+    border-radius: 1px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow to apply border-radius to child elements */
+  }
+
+
+  #thin-header {
+    background-color: #d9c7b4; /* Adjust as needed */
+    padding: 10px 0;
+    font-size: 14px; /* Adjust as needed */
+    border-bottom: 1px solid #e9d4c0; /* Adjust as needed */
+  }
+  
+  #thin-header .container {
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+  }
+  
+  #thin-header img {
+    width: 20px; /* Adjust as needed */
+    margin: 0 5px;
+  }
+
+  #thin-header .container2 {
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+  }
+  
+  #thin-header img {
+    width: 20px; /* Adjust as needed */
+    margin: 0 5px;
+  }
+  
+  
+  
+  header {
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  #logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+  }
+  
+  nav li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  nav a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  #banner .carousel {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .carousel-image {
+    width: 100%;
+    display: none;
+  }
+  
+  .carousel-image.active {
+    display: block;
+  }
+  
+  .carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+  }
+  
+  .carousel-buttons button {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: #ffffff;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+  }
+  
+  .carousel-buttons button:hover {
+    opacity: 1;
+  }
+
+  #banner img {
+    width: 100%;
+    display: block;
+    margin: 15px 0;
+  }
+  
+  #info {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer {
+    padding: 10px;
+    text-align: center;
+  }
+  
+
+  #whatsapp-bubble {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #25D366; /* WhatsApp green */
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 30px;
+    color: white;
+    z-index: 1000;
+    display: flex;
+}
+
+#whatsapp-bubble:hover {
+    background-color: #128C7E; /* Darker green on hover */
+}
+
+
+#side-menu-button {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    background-color: #ead6d6;
+    border-radius: 10px;
+    color: rgb(50, 49, 49);
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    transform: rotate(90deg);
+    transform-origin: 70% 70%;
+}
+
+#floating-menu {
+    position: fixed;
+    top: 30%;
+    right: 3%;
+    display: none;
+    background-color: #8a7564;
+    z-index: 999;
+    padding: 10px;
+    border-radius: 0 5px 5px 0;
+}
+
+.menu-option {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.menu-option:hover {
+    background-color: #555;
+}
+
+
+  /* Mobile responsiveness */
+  @media screen and (max-width: 768px) {
+    nav ul {
+      display: block;
+    }
+  
+    nav li {
+      display: block;
+      text-align: center;
+      margin: 5px 0;
+    }
+  
+    #info {
+      padding: 10px;
+    }
+  
+    footer {
+      padding: 5px;
+    }
+
+    .card2 {
+        margin: 5px;
+      }
+  }
+  

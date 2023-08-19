@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Our Services</title>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="services_style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   </head>
+   <body>
+      <div class="card" style="background-color: #eae0d6">
+         <header>
+            <nav>
+               <ul>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="downloads.html">Downloads</a></li>
+                  <li><a href="guruji.html">Guruji</a></li>
+                  <li><a href="faqs.html">FAQs</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+               </ul>
+            </nav>
+         </header>
+         <div class="section">
+            <div class="container">
+               <h1 class="center-align">Our Services</h1>
+               <!-- <img src="header-image.jpg" alt="Our Services" class="responsive-img"> -->
+            </div>
+         </div>
+         <div class="section">
+            <div class="container">
+               <div class="row">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+      <script>
+        //  window.onload = function() {
+        //    const cardsData = [
+        //  {
+        //  "image": "banner.jpg",
+        //  "title": "Vastu Shanti",
+        //  "details": "Here is some more information about this product that is only revealed once clicked on."
+        //  },
+        //  {
+        //  "image": "banner.jpg",
+        //  "title": "Satyanarayan",
+        //  "details": "Here is some more information about this product that is only revealed once clicked on."
+        //  },
+        //  {
+        //  "image": "banner2.jpg",
+        //  "title": "Wedding",
+        //  "details": "Here is some more information about this product that is only revealed once clicked on."
+        //  },
+        //  {
+        //  "image": "banner3.jpg",
+        //  "title": "Munja",
+        //  "details": "Here is some more information about this product that is only revealed once clicked on."
+        //  }
+        //  ];
+         
+        //      const container = document.querySelector('.row');
+         
+        //      cardsData.forEach(card => {
+        //          const cardHTML = `
+        //              <div class="col s12 m6">
+        //                  <div class="card">
+        //                      <div class="card-image waves-effect waves-block waves-light">
+        //                          <img class="activator" src="${card.image}">
+        //                      </div>
+        //                      <div class="card-content">
+        //                          <span class="card-title activator grey-text text-darken-4">${card.title}<i class="material-icons right">more_vert</i></span>
+        //                          <p><a href="#">This is a link</a></p>
+        //                      </div>
+        //                      <div class="card-reveal">
+        //                          <span class="card-title grey-text text-darken-4">${card.title}<i class="material-icons right">close</i></span>
+        //                          <p>${marked(card.details)}</p>
+        //                      </div>
+        //                  </div>
+        //              </div>`;
+        //          container.innerHTML += cardHTML;
+        //      });
+        //  };
+
+         document.onreadystatechange = function () {
+    if (document.readyState === "complete") {
+      console.log("Marked:", marked);
+                   const cardsData = [
+         {
+         "image": "banner.jpg",
+         "title": "Vastu Shanti",
+         "details": `- id : Randomly Generated ID
+ - userId : Access it from the Session variable
+ - material
+ - amount
+ - unit
+ - orderStatus: If the user presses save, set 0, if they submit set 1`
+         },
+         {
+         "image": "banner.jpg",
+         "title": "Satyanarayan",
+         "details": "Here is some more information about this product that is only revealed once clicked on."
+         },
+         {
+         "image": "banner2.jpg",
+         "title": "Wedding",
+         "details": "Here is some more information about this product that is only revealed once clicked on."
+         },
+         {
+         "image": "banner3.jpg",
+         "title": "Munja",
+         "details": "Here is some more information about this product that is only revealed once clicked on."
+         }
+         ];
+
+        const container = document.querySelector('.row');
+
+
+        $(function(){
+        $.getJSON('names.json',function(data){
+            console.log('success');
+            $.each(data.employees,function(i,emp){
+                $('ul').append('<li>'+emp.firstName+' '+emp.lastName+'</li>');
+            });
+        }).error(function(){
+            console.log('error');
+        });
+    });
+
+        
+        cardsData.forEach(card => {
+          console.log(marked.parse(card.details));
+            const cardHTML = `
+                <div class="col s12 m6">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="${card.image}">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">${card.title}<i class="material-icons right">more_vert</i></span>
+                            <p><a href="#">This is a link</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">${card.title}<i class="material-icons right">close</i></span>
+                            ${marked.parse(card.details)}
+                      
+                        </div>
+                    </div>
+                </div>`;
+            container.innerHTML += cardHTML;
+        });
+    }
+};
+      </script>
+   </body>
+</html>

@@ -1,0 +1,22 @@
+[
+    {
+      "image": "banner.jpg",
+      "title": "Vastu Shanti",
+      "details": "Here is some more information about this product that is only revealed once clicked on."
+    },
+    {
+      "image": "banner.jpg",
+      "title": "Satyanarayan",
+      "details": "Here is some more information about this product that is only revealed once clicked on."
+    },
+    {
+      "image": "banner2.jpg",
+      "title": "Wedding",
+      "details": "Here is some more information about this product that is only revealed once clicked on."
+    },
+    {
+      "image": "banner3.jpg",
+      "title": "Munja",
+      "details": "Here is some more information about this product that is only revealed once clicked on."
+    }
+  ]
