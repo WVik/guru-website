@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <title>Our Downloads</title>
+      <title>Our Blogs</title>
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="style.css">
-      <link rel="stylesheet" href="services_style.css">
+      <link rel="stylesheet" href="blogs_style.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -26,7 +26,7 @@
          </header>
          <div class="section">
             <div class="container">
-               <h1 class="center-align">Available Downloads</h1>
+               <h1 class="center-align">Our Blogs</h1>
             </div>
          </div>
          <div class="section">
@@ -38,39 +38,40 @@
       </div>
       <!-- Compiled and minified JavaScript -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
       <script>
          document.onreadystatechange = function () {
             if (document.readyState === "complete") {
-               const filesData = [
+               const blogsData = [
                   {
-                     "filename": "./Downloads/file1.pdf",
-                     "title": "Aarti Sets",
-                     "details": "List of Aartis"
+                     "image": "./Images/blog1.jpg",
+                     "title": "The Importance of Rituals",
+                     "blogURL": "./Blogs/blog1.html"
                   },
                   {
-                    "filename": "./Downloads/file2.pdf",
-                     "title": "Sahitya List for Munja",
-                     "details": "All the necessary items requred to perform Munja."
+                     "image": "./Images/blog2.jpg",
+                     "title": "Understanding Vedic Traditions",
+                     "blogURL": "./Blogs/blog2.html"
                   },
                   {
-                    "filename": "./Downloads/file3.pdf",
-                     "title": "Sahitya list for Satyanarayan",
-                     "details": "All the necessary items requred to perform Satyanaran."
-                  },
+                     "image": "./Images/blog3.jpg",
+                     "title": "The Essence of Aarti",
+                     "blogURL": "./Blogs/blog3.html"
+                  }
                ];
 
                const container = document.querySelector('.row');
-               filesData.forEach(file => {
+               blogsData.forEach(blog => {
                   const cardHTML = `
                      <div class="col s12 m6">
                          <div class="card">
+                             <div class="card-image">
+                                 <img src="${blog.image}">
+                             </div>
                              <div class="card-content">
-                                 <span class="card-title">${file.title}</span>
-                                 <p>${file.details}</p>
+                                 <span class="card-title">${blog.title}</span>
                              </div>
                              <div class="card-action">
-                                 <a href="${file.filename}" download>Download</a>
+                                 <a href="${blog.blogURL}">Read Blog</a>
                              </div>
                          </div>
                      </div>`;
