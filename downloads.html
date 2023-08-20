@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Our Downloads</title>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="services_style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   </head>
+   <body>
+      <div class="card" style="background-color: #eae0d6">
+         <header>
+            <nav>
+               <ul>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="downloads.html">Downloads</a></li>
+                  <li><a href="guruji.html">Guruji</a></li>
+                  <li><a href="faqs.html">FAQs</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+               </ul>
+            </nav>
+         </header>
+         <div class="section">
+            <div class="container">
+               <h1 class="center-align">Available Downloads</h1>
+            </div>
+         </div>
+         <div class="section">
+            <div class="container">
+               <div class="row">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+      <script>
+         document.onreadystatechange = function () {
+            if (document.readyState === "complete") {
+               const filesData = [
+                  {
+                     "filename": "./Downloads/file1.pdf",
+                     "title": "Munja",
+                     "details": "Description for Munja PDF."
+                  },
+                  {
+                    "filename": "./Downloads/file2.pdf",
+                     "title": "Satyanarayan",
+                     "details": "Description for Satyanarayan PDF."
+                  },
+                  {
+                    "filename": "./Downloads/file3.pdf",
+                     "title": "Lagna",
+                     "details": "Description for Lagna PDF."
+                  },
+                  {
+                    "filename": "./Downloads/file1.pdf",
+                     "title": "Vastushanti",
+                     "details": "Description for Vastushanti PDF."
+                  }
+               ];
+
+               const container = document.querySelector('.row');
+               filesData.forEach(file => {
+                  const cardHTML = `
+                     <div class="col s12 m6">
+                         <div class="card">
+                             <div class="card-content">
+                                 <span class="card-title">${file.title}</span>
+                                 <p>${file.details}</p>
+                             </div>
+                             <div class="card-action">
+                                 <a href="${file.filename}" download>Download</a>
+                             </div>
+                         </div>
+                     </div>`;
+                  container.innerHTML += cardHTML;
+               });
+            }
+         };
+      </script>
+   </body>
+</html>
