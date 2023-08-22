@@ -18,7 +18,9 @@
             <div class="modal-content">
                <div class="modal-header">
                   <h5 class="modal-title">Contact Us</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <button type="button" class="close" data-dismiss="modal" onclick="redirectToIndex()" aria-label="Close">
+                     <!-- <button type="button" class="close" onclick="redirectToIndex()">Close</button> -->
+
                      <span aria-hidden="true">&times;</span>
                   </button>
                </div>
@@ -66,13 +68,13 @@
 
          document.addEventListener('keyup', function(event) {
             if (event.keyCode == 27) {  // 27 is the key code for the Escape key
-                $("#contactModal").modal('hide');  // Close the modal
+               //  $("#contactModal").modal('hide');  // Close the modal
                 window.location.href = "index.html";  // Redirect to index.html
             }
         });
 
          function sendWhatsApp() {
-            const phoneNumber = "+14088235672";
+            const phoneNumber = "+16503149836";
             const name = encodeURIComponent(document.getElementById('name').value);
             const email = encodeURIComponent(document.getElementById('email').value);
             const address = encodeURIComponent(document.getElementById('address').value);

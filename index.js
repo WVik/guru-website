@@ -39,3 +39,8 @@ document.getElementById('openModal').addEventListener('click', function() {
       console.error('Error fetching the modal content:', error);
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+});

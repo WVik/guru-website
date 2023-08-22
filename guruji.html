@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image & Text Layout</title>
+    <style>
+        /* Styles */
+        .container {
+            display: flex;
+            align-items: center; /* Vertically align content */
+            padding: 20px;
+        }
+
+        .image-container {
+            flex: 1;  /* Take up half the space */
+            padding: 20px;
+        }
+
+        .text-container {
+            flex: 1;  /* Take up half the space */
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        img {
+            max-width: 100%;  /* Ensure image doesn't overflow container */
+            border-radius: 8px;  /* Optional rounded corners */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Image on the left -->
+        <div class="image-container">
+            <img src="https://via.placeholder.com/300" alt="Sample Image">
+        </div>
+
+        <!-- Paragraph on the right -->
+        <div class="text-container">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. Donec in efficitur leo. Integer nec felis purus. Nullam sed pellentesque elit, nec congue lacus. Sed a dolor at justo mattis cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent pellentesque, erat ut consequat pulvinar, ante purus hendrerit massa, dapibus volutpat nunc diam sit amet augue.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
