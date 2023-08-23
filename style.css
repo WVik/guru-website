@@ -210,3 +210,8 @@ body {
       }
   }
   
+
+  .nav-wrapper a.sidenav-trigger:hover {
+    background-color: transparent; /* Removes any background color */
+    color: inherit; /* This will*/
+  }
