@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="services_style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <style>
+            /* Card content scrollable style */
+            .card-content {
+                min-height: 350px;
+                max-height: 350px; /* Adjust this height based on your preferred maximum card content height */
+                overflow-y: auto;
+            }
+        </style>
+    </head>
+   <body>
+      <div class="card" style="background-color: #eae0d6">
+         <header>
+            <nav class="deep-orange lighten-3">
+                <div class="nav-wrapper">
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger" style="padding:2px"><i class="material-icons">menu</i></a>
+                    <div class="brand-logo center hide-on-large-only" style="font-family: 'Tillana', cursive;">Rituals Simplified</div> <!-- Mobile view title -->
+                    <!-- <a href="#" class="left hide-on-med-and-down"><img src="logo.jpeg" alt="Rituals Logo" style="height: 64px; vertical-align: middle; padding: 5px;"></a>  -->
+                    <ul class="center-align hide-on-med-and-down">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="guruji.html">Guruji</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <!-- Sidenav for Mobile -->
+            <ul class="sidenav" id="mobile-demo">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="downloads.html">Downloads</a></li>
+                <li><a href="guruji.html">Guruji</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </header>
+         <div class="section">
+            <div class="container">
+                <h1 class="center-align">Available Downloads</h1>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <!-- Card contents will be injected here by the script -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.onreadystatechange = function () {
+            if (document.readyState === "complete") {
+                const filesData = [
+                    {
+                        "whatsapplink": "https://wa.me/+14082427702?text=",
+                        "title": "THUMKA SOULS  - Sangeet Choreography",
+                        "details": "We are Aditi and Swarada, the team behind Thumka souls. Our love for dance prompted us to start this journey and the chance to connect with a wider audience has made it much more rewarding. We specialize in sangeet dance choreography and teach easy and intermediate dances. While we love jiving to the tune of Hindi songs, we also enjoy exploring regional songs. So whatever songs you have in mind, connect with us on Instagram, drop a comment on Youtube/send a message on Gmail to make a request. We will respond to your request with an easy to follow, step by step tutorial. Just reach out to us and together we can make your next sangeet performance really special! Follow us on: Instagram : https://www.instagram.com/thumkasouls/?hl=en Email : thumkasouls@gmail.com"
+                    },
+                    {
+                        "whatsapplink": "https://wa.me/+13174898293?text=",
+                        "title": "MAKEUP SIMPLIFIED - Bridal Hair and Makeup",
+                        "details": " Hey peeps, my name is Kash. This channel is dedicated to all who love and live for makeup. It is meant to create simple, easy and fun looks using the best tool a woman has...MAKE-UP. The sole intent of this effort is to make the day to day makeup easy, simple and enjoyable. I hope you will love it as much as I do. Do like the video, share it with your friends and family and suggestions are always welcome and appreciated in the comments. "
+                    },
+                ];
+    
+                const container = document.querySelector('.row');
+                filesData.forEach(file => {
+                    const cardHTML = `
+                        <div class="col s12 m6">
+                            <div class="card">
+                                <div class="card-content">
+                                    <span class="card-title">${file.title}</span>
+                                    <p>${file.details}</p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="${file.whatsapplink}" target="_blank">Connect on WhatsApp</a>
+                                </div>
+                            </div>
+                        </div>`;
+                    container.innerHTML += cardHTML;
+                });
+            }
+        };
+    
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+        });
+    </script>
+    </body>
+    </html>
