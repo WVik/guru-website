@@ -1,48 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image & Text Layout</title>
-    <style>
-        /* Styles */
-        .container {
-            display: flex;
-            align-items: center; /* Vertically align content */
-            padding: 20px;
-        }
+   <head>
+      <title>Guruji</title>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="services_style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   </head>
+   <body>
+      <header>
+         <nav>
+            <div class="nav-wrapper">
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="center-align hide-on-med-and-down">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="downloads.html">Downloads</a></li>
+                    <li><a href="guruji.html">Guruji</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- Sidenav for Mobile -->
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="downloads.html">Downloads</a></li>
+            <li><a href="guruji.html">Guruji</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </header>
+      <div class="section">
+         <div class="container">
+            <h1 class="center-align">Guruji</h1>
+            <div class="row">
+               <div class="col s12 m6">
+                  <img src="guruji.jpeg" alt="Our Services" class="responsive-img">
+               </div>
+               <div class="col s12 m6">
+                  <!-- <h4>Service Title</h4> -->
+                  <p>
+                    The San Francisco Bay Area is a diverse region with a rich history of immigrant communities. Among these communities are the Marathi-speaking people from Maharashtra, India. The Marathi community has been present in the Bay Area for several decades and has made significant contributions to the region's cultural landscape.
 
-        .image-container {
-            flex: 1;  /* Take up half the space */
-            padding: 20px;
-        }
-
-        .text-container {
-            flex: 1;  /* Take up half the space */
-            padding: 20px;
-            font-family: Arial, sans-serif;
-        }
-
-        img {
-            max-width: 100%;  /* Ensure image doesn't overflow container */
-            border-radius: 8px;  /* Optional rounded corners */
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <!-- Image on the left -->
-        <div class="image-container">
-            <img src="https://via.placeholder.com/300" alt="Sample Image">
-        </div>
-
-        <!-- Paragraph on the right -->
-        <div class="text-container">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. Donec in efficitur leo. Integer nec felis purus. Nullam sed pellentesque elit, nec congue lacus. Sed a dolor at justo mattis cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent pellentesque, erat ut consequat pulvinar, ante purus hendrerit massa, dapibus volutpat nunc diam sit amet augue.
-            </p>
-        </div>
-    </div>
-</body>
+                    The term "Gurujis" in a Marathi context typically refers to learned individuals, scholars, or teachers, especially those who teach or have deep knowledge about Marathi culture, language, literature, and traditions. Here are some potential roles and contributions of such gurujis within the Bay Area Marathi community:
+                    
+                   <ul>
+                    <li>1. Language and Literature: Many Marathi gurujis might be involved in teaching the Marathi language, especially to the younger generation. They might also conduct lectures or seminars on Marathi literature, including the works of famous Marathi poets and writers like P. L. Deshpande, Sant Eknath, Sant Dnyaneshwar, and others.
+                    </li>
+                    <br>
+                   <li> 2. Music and Arts: The Marathi community has a rich tradition of music, dance, and theater. Gurujis in this domain might teach classical music, Natya Sangeet (a form of Marathi musical theater), Lavani (a dance form), or Bhavageet (light Marathi songs). They might also organize or participate in programs like "Natyamahotsav" (theater festivals) or "Sangeet Sandhya" (musical evenings).
+                </li>
+                <br>
+                    <li>3. Religious and Spiritual Teachings: Some gurujis might be involved in imparting knowledge about Marathi religious practices, festivals, and traditions. They could provide insights into the teachings of famous Marathi saints like Sant Tukaram, Sant Namdev, and others. They might also conduct or lead religious ceremonies, pujas, and bhajans.
+                    </li>
+                    </ul> 
+                    In the Bay Area, organizations like the "Bay Area Marathi Mandal" or other cultural associations might be associated with such gurujis or offer programs and events that they lead. However, it's essential to note that while the Bay Area has a thriving Marathi community, not every Marathi person might be connected with or even aware of these gurujis. The concept of a guru or teacher is deeply respected in Indian culture, and those who take on such roles in the diaspora often do so out of a passion for preserving and sharing their cultural heritage.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script>
+         document.addEventListener('DOMContentLoaded', function() {
+             var elems = document.querySelectorAll('.sidenav');
+             var instances = M.Sidenav.init(elems);
+         });
+      </script>
+   </body>
 </html>
