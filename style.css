@@ -215,3 +215,7 @@ body {
     background-color: transparent; /* Removes any background color */
     color: inherit; /* This will*/
   }
+
+  .faq-item {
+    margin-bottom: 20px;
+}
