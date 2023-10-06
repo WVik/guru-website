@@ -27,23 +27,23 @@
                <div class="modal-body">
                   <form id="contactForm">
                      <div class="form-group">
-                        <label for="name">Name:</label>
+                        <label for="name">Name:*</label>
                         <input type="text" class="form-control" id="name" required>
                      </div>
                      <div class="form-group">
                         <label for="email">Email:</label>
-                        <input type="email" class="form-control" id="email" required>
+                        <input type="email" class="form-control" id="email">
                      </div>
                      <div class="form-group">
                         <label for="address">Address:</label>
-                        <input type="text" class="form-control" id="address" required>
+                        <input type="text" class="form-control" id="address">
                      </div>
                      <div class="form-group">
-                        <label for="details">Details:</label>
-                        <textarea class="form-control" id="details" rows="4"></textarea>
+                        <label for="details">Details:*</label>
+                        <textarea class="form-control" id="details" rows="4" required></textarea>
                      </div>
                      <div class="form-group">
-                        <label for="service">Service:</label>
+                        <label for="service">Service:*</label>
                         <select class="form-control" id="service" required>
                            <option>Satyanaran</option>
                            <option>Munja</option>
@@ -61,6 +61,36 @@
             </div>
          </div>
       </div>
+
+
+
+      <footer class="footer-container">
+         <!-- 1. Logo and Information -->
+         <div class="footer-col">
+             <img src="pujarituals.png" alt="Rituals Logo" class="footer-logo">
+             <p>Some brief information about the business. Maybe a mission statement or a short description.</p>
+         </div>
+     
+         <!-- 2. Quick Access Links -->
+         <div class="footer-col">
+             <h4>Quick Links</h4>
+             <ul>
+                 <li><a href="services.html">Services</a></li>
+                 <li><a href="downloads.html">Downloads</a></li>
+                 <li><a href="guruji.html">Guruji</a></li>
+                 <li><a href="faqs.html">FAQs</a></li>
+                 <li><a href="trustedpartners.html">Trusted Partners</a></li>
+             </ul>
+         </div>
+     
+         <!-- 3. Contact Information -->
+         <div class="footer-col">
+             <h4>Contact Us</h4>
+             <p>Phone: 123-456-7890</p>
+             <p>Email: example@email.com</p>
+             <p>Address: 123 Street Name, City, Country</p>
+         </div>
+     </footer>
       <script>
          $(document).ready(function(){
             $("#contactModal").modal('show');

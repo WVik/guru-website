@@ -12,11 +12,12 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
    </head>
    <body>
+      <div class="card" style="background-color: #eae0d6">
     <header>
         <nav class="deep-orange lighten-3">
             <div class="nav-wrapper">
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger" style="padding:2px"><i class="material-icons">menu</i></a>
-                <div class="brand-logo center hide-on-large-only" style="font-family: 'Tillana', cursive;">Rituals Simplified</div> <!-- Mobile view title -->
+                <div class="brand-logo center hide-on-large-only" style="font-family: 'Tillana', cursive;">Puja Rituals</div> <!-- Mobile view title -->
                 <!-- <a href="#" class="left hide-on-med-and-down"><img src="logo.jpeg" alt="Rituals Logo" style="height: 64px; vertical-align: middle; padding: 5px;"></a>  -->
                 <ul class="center-align hide-on-med-and-down">
                     <li><a href="index.html">Home</a></li>
@@ -70,7 +71,38 @@
             </div>
          </div>
       </div>
-      <!-- Compiled and minified JavaScript -->
+
+
+
+      <footer class="footer-container">
+         <!-- 1. Logo and Information -->
+         <div class="footer-col">
+             <img src="pujarituals.png" alt="Rituals Logo" class="footer-logo">
+             <p>Rituals Simplified</p>
+         </div>
+     
+         <!-- 2. Quick Access Links -->
+         <div class="footer-col">
+             <h4>Quick Links</h4>
+             <ul>
+                 <li><a href="services.html">Services</a></li>
+                 <li><a href="downloads.html">Downloads</a></li>
+                 <li><a href="guruji.html">Guruji</a></li>
+                 <li><a href="faqs.html">FAQs</a></li>
+                 <li><a href="trustedpartners.html">Trusted Partners</a></li>
+             </ul>
+         </div>
+     
+         <!-- 3. Contact Information -->
+         <div class="footer-col">
+             <h4>Contact Us</h4>
+             <p>Phone: +1(650)314-9836</p>
+             <p>Email: pujarituals@gmail.com</p>
+             <p>Address: Milpitas, CA, 95035</p>
+         </div>
+     </footer>
+
+     <!-- Javascript -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <script>
          document.addEventListener('DOMContentLoaded', function() {
@@ -78,5 +110,6 @@
              var instances = M.Sidenav.init(elems);
          });
       </script>
+      </div>
    </body>
 </html>

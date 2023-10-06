@@ -18,10 +18,15 @@
    </head>
    <body >
       <script src="index.js"></script>
-      <div class="card2" style="background-color: #eae0d6">
+      <div class="card2" style="background-color: #fbe0cb">
          <header>
+
+            <div id="contact-details">
+               <span class="phone">Phone: +1(650)314-9836</span> | <span class="email">Email: pujarituals@gmail.com</span>
+           </div>
+           
             <div id="logo" >
-               <img src="logo.jpeg" alt="Rituals Logo">
+               <img src="pujarituals.png" alt="Rituals Logo" style="width: 10em; height:10em; border-radius: 200px;">
             </div>
             <nav>
                <ul>
@@ -41,13 +46,13 @@
                   <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                </ol>
                <div class="carousel-inner">
-                  <div class="carousel-item active">
+                  <div class="carousel-item active" data-interval="5000">
                      <img src="banner1.jpg" class="d-block w-100" alt="Image 1">
                   </div>
-                  <div class="carousel-item">
+                  <div class="carousel-item" data-interval="5000"> 
                      <img src="banner2.jpg" class="d-block w-100" alt="Image 2">
                   </div>
-                  <div class="carousel-item">
+                  <div class="carousel-item" data-interval="5000">
                      <img src="banner3.jpg" class="d-block w-100" alt="Image 3">
                   </div>
                </div>
@@ -65,9 +70,35 @@
             <h1>About Rituals</h1>
             <p>Information about the business here.</p>
          </section>
-         <footer>
-            <p>&copy; 2023 Rituals</p>
-         </footer>
+
+
+         <footer class="footer-container">
+            <!-- 1. Logo and Information -->
+            <div class="footer-col">
+                <img src="pujarituals.png" alt="Rituals Logo" class="footer-logo">
+                <p>Explore our Services and Downloads page for detailed information about how we can help you!</p>
+            </div>
+        
+            <!-- 2. Quick Access Links -->
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="downloads.html">Downloads</a></li>
+                    <li><a href="guruji.html">Guruji</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="trustedpartners.html">Trusted Partners</a></li>
+                </ul>
+            </div>
+        
+            <!-- 3. Contact Information -->
+            <div class="footer-col">
+               <h4>Contact Us</h4>
+               <p>Phone: +1(650)314-9836</p>
+               <p>Email: pujarituals@gmail.com</p>
+               <p>Address: Milpitas, CA, 95035</p>
+           </div>
+        </footer>
          <!-- Rest of your HTML content here -->
       </div>
       <a href="https://wa.me/+16503149836?text=" id="whatsapp-bubble">
